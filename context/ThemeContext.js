@@ -5,15 +5,15 @@ import { createContext, useContext, useEffect, useState } from "react";
 const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
+  // Inicializar con 'dark' para coincidir con el script del layout
   const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
+    // Leer el tema guardado solo en el cliente
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
+    if (savedTheme && savedTheme !== theme) {
       setTheme(savedTheme);
       document.documentElement.classList.toggle("dark", savedTheme === "dark");
-    } else {
-      document.documentElement.classList.add("dark");
     }
   }, []);
 
