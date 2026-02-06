@@ -10,11 +10,11 @@ export default function Hero() {
   const focusItems = focus[lang];
 
   return (
-    <section id="hero" className="relative max-w-7xl mx-auto px-4 pt-32 pb-24 min-h-screen flex items-center">
+    <section id="hero" className="relative max-w-7xl mx-auto px-4 md:pb-60 pt-10 min-h-screen flex items-center">
       
       {/* Background Elements */}
       <div className="absolute -top-24 -left-24 w-96 h-96 bg-(--primary) opacity-20 blur-3xl rounded-full pointer-events-none animate-pulse" />
-      <div className="absolute top-1/2 -right-24 w-72 h-72 bg-(--secondary) opacity-10 blur-3xl rounded-full pointer-events-none animate-pulse" style={{ animationDelay: "1s" }} />
+      <div className="absolute top-1/2 xl:-right-24 right-4 w-72 h-72 bg-(--secondary) opacity-10 blur-3xl rounded-full pointer-events-none animate-pulse" style={{ animationDelay: "1s" }} />
 
       <div className="grid gap-6 lg:grid-cols-3 relative w-full">
         
@@ -66,7 +66,8 @@ export default function Hero() {
                 <svg className="w-5 h-5 text-(--primary)" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <span className="text-sm opacity-70">{text.experience} {text.experienceLabel}</span>
+                <span className="text-sm opacity-70">{text.experience} {text.experienceLabel} </span>
+           
               </div>
             </div>
           </div>
@@ -109,11 +110,9 @@ export default function Hero() {
               {lang === "es" ? "Experiencia" : "Experience"}
             </p>
             <p className="mt-3 text-5xl font-bold bg-linear-to-r from-(--primary) to-(--secondary) bg-clip-text text-transparent">
-              {text.experience}
+               {text.experienceDetail}
             </p>
-            <p className="mt-1 text-xs opacity-70">
-              {text.experienceLabel}
-            </p>
+            
           </div>
 
           {/* Focus Card */}
@@ -147,7 +146,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block">
+      <div className="absolute bottom-40 left-1/2 -translate-x-1/2 hidden md:block">
         <a href="#about" className="flex flex-col items-center gap-2 opacity-50 hover:opacity-100 transition">
           <span className="text-xs">{lang === "es" ? "Desplázate" : "Scroll"}</span>
           <svg className="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">

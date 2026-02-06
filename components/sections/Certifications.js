@@ -6,7 +6,7 @@ import { certifications, workCertifications, certificationTypes, certificationSt
 
 export default function Certifications() {
   const { lang } = useLanguage();
-  const [activeTab, setActiveTab] = useState("academic");
+  const [activeTab, setActiveTab] = useState("all");
   const types = certificationTypes[lang];
   const stats = certificationStats[lang];
 
@@ -16,7 +16,9 @@ export default function Certifications() {
     : allCertifications.filter(c => c.type === activeTab);
 
   return (
-    <section id="certifications" className="max-w-7xl mx-auto px-4 py-24">
+    <section id="certifications" className="relative max-w-7xl mx-auto px-4 py-24">
+      {/* Efecto flotante inferior central */}
+  <div className="absolute top-24 left-1/2 -translate-x-1/2 w-full h-48 bg-(--secondary) opacity-8 blur-3xl pointer-events-none animate-bounce" style={{ animationDuration: "5s" }} />
       
       {/* Header */}
       <div className="max-w-2xl">
@@ -120,7 +122,7 @@ export default function Certifications() {
             {/* Position (for work certs) */}
             {cert.position && (
               <p className="mt-1 text-sm opacity-70">
-                {cert.position[lang]}
+                {typeof cert.position === "object" ? cert.position[lang] : cert.position}
               </p>
             )}
 
@@ -133,7 +135,7 @@ export default function Certifications() {
 
             {/* Description */}
             <p className="mt-4 text-sm opacity-70 leading-relaxed">
-              {cert.description[lang]}
+              {typeof cert.description === "object" ? cert.description[lang] : cert.description}
             </p>
 
             {/* Responsibilities (for work certs) */}

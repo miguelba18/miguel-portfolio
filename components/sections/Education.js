@@ -8,7 +8,18 @@ export default function Education() {
   const languagesList = languages[lang];
 
   return (
-    <section id="education" className="max-w-7xl mx-auto px-4 py-24">
+    <section id="education" className="relative max-w-7xl mx-auto px-4 py-24">
+     
+  {/* Efecto giratorio lento superior */}
+  <div className="absolute -top-20 left-0 w-72 h-72 bg-(--primary) opacity-10 blur-3xl rounded-full pointer-events-none animate-spin" style={{ animationDuration: "25s" }} />
+  
+  {/* Efecto de ping inferior derecha */}
+  <div className="absolute bottom-0 right-1/2 w-80 h-80 bg-(--secondary) opacity-12 blur-3xl rounded-full pointer-events-none animate-ping" style={{ animationDuration: "4s", animationDelay: "0.5s" }} />
+  
+  {/* Efecto de pulso central izquierda */}
+  <div className="absolute top-1/2 left-28 w-64 h-64 bg-(--primary) opacity-15 blur-3xl rounded-full pointer-events-none animate-pulse" />
+  
+  
       
       {/* Header */}
       <div className="max-w-2xl">
@@ -160,7 +171,7 @@ export default function Education() {
 
       {/* Additional Info */}
       <div className="mt-16 rounded-3xl border border-(--border) bg-(--card) p-8 md:p-10">
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
               <svg className="w-5 h-5 text-(--primary)" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -187,6 +198,19 @@ export default function Education() {
                 : "All degrees are registered with the Colombian Ministry of National Education with verifiable SNIES credentials."}
             </p>
           </div>
+         <div>
+  <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+    <svg className="w-5 h-5 text-(--primary)" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+    </svg>
+    {lang === "es" ? "Certificación en Proceso" : "Certification in Progress"}
+  </h3>
+  <p className="text-sm opacity-70 leading-relaxed">
+    {lang === "es"
+      ? "Actualmente preparándome para obtener la certificación de inglés nivel B2. Próximamente certificado oficial."
+      : "Currently preparing to obtain B2 English level certification. Official certificate coming soon."}
+  </p>
+</div>
         </div>
       </div>
     </section>

@@ -7,7 +7,9 @@ export default function Experience() {
   const { lang } = useLanguage();
 
   return (
-    <section id="experience" className="max-w-7xl mx-auto px-4 py-24">
+    <section id="experience" className="relative max-w-7xl mx-auto px-4 py-24">
+      {/* Efecto horizontal superior */}
+  <div className="absolute top-20 left-1/2 -translate-x-1/2 w-full h-40 bg-(--primary) opacity-8 blur-3xl pointer-events-none animate-pulse" />
       
       {/* Header */}
       <div className="max-w-2xl">
@@ -130,7 +132,7 @@ export default function Experience() {
           </p>
         </div>
         
-        <div className="rounded-xl border border-(--bordeg-(--card)) p-6 text-center hover:scale-105 transition-transform">
+         <div className="rounded-xl border border-(--border) bg-(--card) p-6 text-center hover:scale-105 transition-transform">
           <p className="text-3xl font-bold text-(--primary)">3</p>
           <p className="mt-2 text-xs opacity-70">
             {lang === "es" ? "Roles desempeñados" : "Roles performed"}
@@ -143,6 +145,7 @@ export default function Experience() {
             {lang === "es" ? "Sectores trabajados" : "Sectors worked"}
           </p>
         </div>
+       
       </div>
     </section>
   );

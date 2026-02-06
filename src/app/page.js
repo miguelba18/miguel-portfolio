@@ -23,6 +23,16 @@ export default function Home() {
         <Education />
         <Certifications />
         <Contact />
+        {/* 
+        
+        
+        
+        
+        
+        
+        
+        
+          */}
 
  
       </main>
