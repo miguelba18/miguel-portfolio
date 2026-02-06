@@ -8,7 +8,17 @@ export default function Contact() {
   const content = contactContent[lang];
 
   return (
-    <section id="contact" className="max-w-7xl mx-auto px-4 py-24">
+    <section id="contact" className="relative max-w-7xl mx-auto px-4 py-24">
+      
+  {/* Efecto diagonal superior izquierda */}
+  <div className="absolute top-0 left-0 w-40 h-40 bg-(--secondary) opacity-12 blur-3xl rounded-full pointer-events-none animate-ping" style={{ animationDuration: "3s" }} />
+  
+  {/* Efecto de pulso central derecha */}
+  <div className="absolute top-1/2 right-0   w-96 h-96 bg-(--primary) opacity-15 blur-3xl rounded-full pointer-events-none animate-pulse" style={{ animationDelay: "1s" }} />
+  
+  
+  
+  
       
       <div className="rounded-3xl border border-(--border) bg-(--card) p-8 md:p-12 backdrop-blur-sm">
         

@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Miguel Ángel Bahamón Rocha",
-  shortName: "Miguel.dev",
+  shortName: "Miguel.Dev",
   description: {
     es: "Ingeniero de Software Full Stack con experiencia en desarrollo web, liderazgo técnico y gestión de proyectos. Especializado en React, Node.js y arquitecturas escalables.",
     en: "Full Stack Software Engineer with experience in web development, technical leadership, and project management. Specialized in React, Node.js, and scalable architectures.",
@@ -35,7 +35,7 @@ export const socialLinks = [
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/miguel-angel-bahamon-rocha",
+    url: "https://www.linkedin.com/in/miguel-angel-bahamon-rocha-01444031a/",
     icon: "linkedin",
     color: "#0A66C2",
   },

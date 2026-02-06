@@ -11,7 +11,10 @@ export default function About() {
   const stats = metrics[lang];
 
   return (
-    <section id="about" className="max-w-7xl mx-auto px-4 py-24">
+    <section id="about" className="relative max-w-7xl mx-auto px-4 py-24">
+      <div className="absolute top-0 right-0 w-80 h-80 bg-(--primary) opacity-15 blur-3xl rounded-full pointer-events-none animate-pulse" />
+  <div className="absolute bottom-0 left-0 w-64 h-64 bg-(--secondary) opacity-10 blur-3xl rounded-full pointer-events-none animate-pulse" style={{ animationDelay: "0.5s" }} />
+      
       
       {/* Header */}
       <div className="max-w-2xl">

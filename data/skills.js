@@ -89,6 +89,8 @@ export const skills = {
       "C#",
       "Technical Leadership",
       "Project Management",
+      "LLM Integration",
+      "IA Tools",
     ],
   },
 };

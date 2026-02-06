@@ -14,7 +14,9 @@ export default function Projects() {
     : projects.filter(p => p.category === activeCategory);
 
   return (
-    <section id="projects" className="max-w-7xl mx-auto px-4 py-24">
+    <section id="projects" className="relative max-w-7xl mx-auto px-4 py-24">
+      <div className="absolute top-1/4  left-0 w-56 h-56 bg-(--primary) opacity-10 blur-3xl rounded-full pointer-events-none animate-pulse" />
+      <div className="absolute bottom-1/4 right-30 w-44 h-44 bg-(--secondary) opacity-10 blur-3xl rounded-full pointer-events-none animate-pulse" style={{ animationDelay: "0.5s" }} />
       
       {/* Header */}
       <div className="max-w-2xl">

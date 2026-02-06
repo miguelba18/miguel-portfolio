@@ -8,7 +8,17 @@ export default function Skills() {
   const expertiseItems = expertise[lang];
 
   return (
-    <section id="skills" className="max-w-7xl mx-auto px-4 py-24">
+    <section id="skills" className="relative max-w-7xl mx-auto px-4 py-24">
+      
+  
+  
+  {/* Efecto de bounce lateral izquierdo */}
+  <div className="absolute top-1/3 -left-24 w-72 h-72 bg-(--secondary) opacity-12 blur-3xl rounded-full pointer-events-none animate-bounce" style={{ animationDuration: "3.5s" }} />
+  
+  {/* Efecto giratorio inferior derecha */}
+  <div className="absolute -bottom-16 right-1/4 w-80 h-80 bg-(--primary) opacity-10 blur-3xl rounded-full pointer-events-none animate-spin" style={{ animationDuration: "30s" }} />
+  
+  
       
       {/* Header */}
       <div className="max-w-2xl">
